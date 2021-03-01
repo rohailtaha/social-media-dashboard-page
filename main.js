@@ -3,6 +3,7 @@ class ThemeSwitcher {
     this.theme = 'LIGHT'
     this.switch = document.getElementById('switch')
     this.switch.addEventListener('click', this.toggleTheme.bind(this))
+    this.toggleTheme();
     this.addCardHoverEffect()
   }
 
@@ -33,7 +34,7 @@ class ThemeSwitcher {
   }
 
   toggleTheme(event) {
-    event.preventDefault()
+    if(event) event.preventDefault()
     this.toggleSwitchBackground()
     this.toggleSwitchBtnBackground()
     if (this.theme === 'LIGHT') {
