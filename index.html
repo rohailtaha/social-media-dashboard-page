@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+  </head>
+  <body class="bg-light-body">
+    <header class="bg-light-header pt-2h pb-6 mb-2">
+      <div class="container">
+        <div>
+          <div class="header-main-content mb-1h fw-bold pb-2">
+            <h1 class="text-primary-light">Social Media Dashboard</h1>
+            <p class="text-secondary-light">Total Followers: 23,004</p>
+          </div>
+          <div class="toggle-theme-cta text-secondary-light">
+            <p class="fw-bold">Dark Mode</p>
+            <a
+              href="#"
+              class="theme-switch bg-light-switch ml-1h"
+              id="switch"
+            >
+              <div class="switch-light-mode"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container container-relative">
+      <section class="section-followers">
+        <ul class="followers-list">
+
+          <li>
+            <a href="#" class="followers-facebook bg-light-card">
+              <div class="logo-username">
+                <img src="images/icon-facebook.svg" alt="" class="logo" />
+                <p class="username text-secondary-light fw-bold">@nathanf</p>
+              </div>
+              <h2 class="followers-count text-primary-light">1987</h2>
+              <p class="followers-text text-secondary-light">Followers</p>
+              <div class="followers-today fw-bold">
+                <img src="images/icon-up.svg" alt="" />
+                <span>12 Today</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="followers-twitter bg-light-card">
+              <div class="logo-username">
+                <img src="images/icon-twitter.svg" alt="" class="logo" />
+                <p class="username text-secondary-light fw-bold">@nathanf</p>
+              </div>
+              <h2 class="followers-count text-primary-light">1044</h2>
+              <p class="followers-text text-secondary-light">Followers</p>
+              <div class="followers-today fw-bold">
+                <img src="images/icon-up.svg" alt="" /><span>99 Today</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="followers-instagram bg-light-card">
+              <div class="gradient-instagram"></div>
+              <div class="logo-username">
+                <img src="images/icon-instagram.svg" alt="" class="logo" />
+                <p class="username text-secondary-light fw-bold">
+                  @realnathanf
+                </p>
+              </div>
+              <h2 class="followers-count text-primary-light">11k</h2>
+              <p class="followers-text text-secondary-light">Followers</p>
+              <div class="followers-today fw-bold">
+                <img src="images/icon-up.svg" alt="" />
+                <span> 1099 Today</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="followers-youtube bg-light-card">
+              <div class="logo-username">
+                <img src="images/icon-youtube.svg" alt="" class="logo" />
+                <p class="username text-secondary-light fw-bold">Nathan F.</p>
+              </div>
+              <h2 class="followers-count text-primary-light">8239</h2>
+              <p class="followers-text text-secondary-light">Subscribers</p>
+              <div class="followers-today fw-bold">
+                <img src="images/icon-down.svg" alt="" />
+                <span id="text-red"> 144 Today</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section-engagement">
+        <h2 class="overview-today-text text-secondary-light mt-4 mb-2h">
+          Overview - Today
+        </h2>
+        <ul class="engagement-list">
+          <li>
+            <a href="#" class="bg-light-card">
+              <div>
+                <div>
+                  <p class="engagement-type text-secondary-light fw-bold">
+                    Page Views
+                  </p>
+                  <img src="images/icon-facebook.svg" alt="" class="logo" />
+                </div>
+                <div>
+                  <h2 class="engagement-count text-primary-light">87</h2>
+                  <span class="percent-change">
+                    <img src="images/icon-up.svg" alt="" />
+                    3%</span
+                  >
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="bg-light-card">
+              <div>
+                <div class="page-views">
+                  <p class="text-secondary-light fw-bold engagement-type">
+                    Likes
+                  </p>
+                  <img src="images/icon-facebook.svg" alt="" class="logo" />
+                </div>
+                <div>
+                  <h2 class="engagement-count text-primary-light">52</h2>
+                  <span class="percent-change"
+                    ><img src="images/icon-down.svg" alt="" />2%</span
+                  >
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="bg-light-card">
+              <div>
+                <div class="page-views">
+                  <p class="text-secondary-light fw-bold engagement-type">
+                    Likes
+                  </p>
+                  <img src="images/icon-instagram.svg" alt="" class="logo" />
+                </div>
+                <div>
+                  <h2 class="engagement-count text-primary-light">5462</h2>
+                  <span class="percent-change"
+                    ><img src="images/icon-up.svg" alt="" />2257%</span
+                  >
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="bg-light-card">
+              <div>
+                <div class="page-views">
+                  <p class="text-secondary-light fw-bold engagement-type">
+                    Profile Views
+                  </p>
+                  <img src="images/icon-instagram.svg" alt="" class="logo" />
+                </div>
+                <div>
+                  <h2 class="engagement-count text-primary-light">52k</h2>
+                  <span class="percent-change"
+                    ><img src="images/icon-up.svg" alt="" />1375%</span
+                  >
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="bg-light-card">
+              <div>
+                <div class="page-views">
+                  <p class="text-secondary-light fw-bold engagement-type">
+                    Retweets
+                  </p>
+                  <img src="images/icon-twitter.svg" alt="" class="logo" />
+                </div>
+                <div>
+                  <h2 class="engagement-count text-primary-light">117</h2>
+                  <span class="percent-change"
+                    ><img src="images/icon-up.svg" alt="" />303%</span
+                  >
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="bg-light-card">
+              <div>
+                <div class="page-views">
+                  <p class="text-secondary-light fw-bold engagement-type">
+                    Likes
+                  </p>
+                  <img src="images/icon-twitter.svg" alt="" class="logo" />
+                </div>
+                <div>
+                  <h2 class="engagement-count text-primary-light">507</h2>
+                  <span class="percent-change"
+                    ><img src="images/icon-up.svg" alt="" />553%</span
+                  >
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="bg-light-card">
+              <div>
+                <div class="page-views">
+                  <p class="text-secondary-light fw-bold engagement-type">
+                    Likes
+                  </p>
+                  <img src="images/icon-youtube.svg" alt="" class="logo" />
+                </div>
+                <div>
+                  <h2 class="engagement-count text-primary-light">107</h2>
+                  <span class="percent-change"
+                    ><img src="images/icon-down.svg" alt="" />19%</span
+                  >
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="bg-light-card">
+              <div>
+                <div class="page-views">
+                  <p class="text-secondary-light fw-bold engagement-type">
+                    Total Views
+                  </p>
+                  <img src="images/icon-youtube.svg" alt="" class="logo" />
+                </div>
+                <div>
+                  <h2 class="engagement-count text-primary-light">1407</h2>
+                  <span class="percent-change"
+                    ><img src="images/icon-down.svg" alt="" />12%</span
+                  >
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <!-- 
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="main.js"></script>
+  </body>
+</html>
