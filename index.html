@@ -18,18 +18,19 @@
     <link rel="stylesheet" href="css/main.css" />
     <title>Social Media Dashboard</title>
   </head>
-  <body class="bg-light-body">
+  <body>
+    <div class="light-theme" id="theme-provider">
     <header class="header bg-light-header">
       <div class="container">
         <div>
           <div class="header__main-content">
-            <h1 class="text-primary-light">Social Media Dashboard</h1>
-            <p class="text-secondary-light">Total Followers: 23,004</p>
+            <h1 class="text-primary">Social Media Dashboard</h1>
+            <p class="text-secondary">Total Followers: 23,004</p>
           </div>
-          <div class="header__theme-toggle text-secondary-light">
+          <div class="header__theme-toggle text-secondary">
             <p>Dark Mode</p>
             <button class="header__theme-btn bg-light-switch" id="theme-btn">
-              <div class="switch-light-mode"></div>
+              <div class="switch switch-light-mode"></div>
             </button>
           </div>
         </div>
@@ -46,25 +47,25 @@
                 alt="facebook-logo"
                 class="logo"
               />
-              <p class="username text-secondary-light">@nathanf</p>
+              <p class="username text-secondary">@nathanf</p>
             </div>
-            <h2 class="followers-count text-primary-light">1987</h2>
-            <p class="followers-text text-secondary-light">Followers</p>
+            <h2 class="followers-count text-primary">1987</h2>
+            <p class="followers-text text-secondary">Followers</p>
             <div class="followers-today">
               <img src="images/icon-up.svg" alt="up arrow" />
-              <span>12 Today</span>
+              <span class="figure--increase">12 Today</span>
             </div>
           </li>
 
           <li class="followers-twitter bg-light-card">
             <div class="logo-username">
               <img src="images/icon-twitter.svg" alt="twitter" class="logo" />
-              <p class="username text-secondary-light">@nathanf</p>
+              <p class="username text-secondary">@nathanf</p>
             </div>
-            <h2 class="followers-count text-primary-light">1044</h2>
-            <p class="followers-text text-secondary-light">Followers</p>
+            <h2 class="followers-count text-primary">1044</h2>
+            <p class="followers-text text-secondary">Followers</p>
             <div class="followers-today">
-              <img src="images/icon-up.svg" alt="up arrow" /><span
+              <img src="images/icon-up.svg" alt="up arrow" /><span class="figure--increase"
                 >99 Today</span
               >
             </div>
@@ -77,39 +78,39 @@
                 alt="instagram logo"
                 class="logo"
               />
-              <p class="username text-secondary-light">@realnathanf</p>
+              <p class="username text-secondary">@realnathanf</p>
             </div>
-            <h2 class="followers-count text-primary-light">11k</h2>
-            <p class="followers-text text-secondary-light">Followers</p>
+            <h2 class="followers-count text-primary">11k</h2>
+            <p class="followers-text text-secondary">Followers</p>
             <div class="followers-today">
               <img src="images/icon-up.svg" alt="up arrow" />
-              <span> 1099 Today</span>
+              <span class="figure--increase"> 1099 Today</span>
             </div>
           </li>
           <li class="followers-youtube bg-light-card">
             <div class="logo-username">
               <img src="images/icon-youtube.svg" alt="" class="logo" />
-              <p class="username text-secondary-light">Nathan F.</p>
+              <p class="username text-secondary">Nathan F.</p>
             </div>
-            <h2 class="followers-count text-primary-light">8239</h2>
-            <p class="followers-text text-secondary-light">Subscribers</p>
+            <h2 class="followers-count text-primary">8239</h2>
+            <p class="followers-text text-secondary">Subscribers</p>
             <div class="followers-today">
               <img src="images/icon-down.svg" alt="down arrow" />
-              <span id="text-red"> 144 Today</span>
+              <span class="figure--decrease"> 144 Today</span>
             </div>
           </li>
         </ul>
       </section>
 
       <section>
-        <h2 class="overview-today-text text-secondary-light">
+        <h2 class="overview-today-text">
           Overview - Today
         </h2>
         <ul class="engagement-list">
           <li class="bg-light-card">
             <div>
               <div>
-                <p class="engagement-type text-secondary-light">Page Views</p>
+                <p class="engagement-type text-secondary">Page Views</p>
                 <img
                   src="images/icon-facebook.svg"
                   alt="facebook logo"
@@ -117,8 +118,8 @@
                 />
               </div>
               <div>
-                <h2 class="engagement-count text-primary-light">87</h2>
-                <span class="percent-change percent-change--increase">
+                <h2 class="engagement-count text-primary">87</h2>
+                <span class="percent-change figure--increase">
                   <img src="images/icon-up.svg" alt="up arrow" />
                   3%</span
                 >
@@ -129,7 +130,7 @@
           <li class="bg-light-card">
             <div>
               <div class="page-views">
-                <p class="text-secondary-light engagement-type">Likes</p>
+                <p class="text-secondary engagement-type">Likes</p>
                 <img
                   src="images/icon-facebook.svg"
                   alt="facebook logo"
@@ -137,8 +138,8 @@
                 />
               </div>
               <div>
-                <h2 class="engagement-count text-primary-light">52</h2>
-                <span class="percent-change percent-change--decrease"
+                <h2 class="engagement-count text-primary">52</h2>
+                <span class="percent-change figure--decrease"
                   ><img src="images/icon-down.svg" alt="down arrow" />2%</span
                 >
               </div>
@@ -147,7 +148,7 @@
           <li class="bg-light-card">
             <div>
               <div class="page-views">
-                <p class="text-secondary-light engagement-type">Likes</p>
+                <p class="text-secondary engagement-type">Likes</p>
                 <img
                   src="images/icon-instagram.svg"
                   alt="instagram logo"
@@ -155,8 +156,8 @@
                 />
               </div>
               <div>
-                <h2 class="engagement-count text-primary-light">5462</h2>
-                <span class="percent-change percent-change--increase"
+                <h2 class="engagement-count text-primary">5462</h2>
+                <span class="percent-change figure--increase"
                   ><img src="images/icon-up.svg" alt="up arrow" />2257%</span
                 >
               </div>
@@ -165,7 +166,7 @@
           <li class="bg-light-card">
             <div>
               <div class="page-views">
-                <p class="text-secondary-light engagement-type">
+                <p class="text-secondary engagement-type">
                   Profile Views
                 </p>
                 <img
@@ -175,8 +176,8 @@
                 />
               </div>
               <div>
-                <h2 class="engagement-count text-primary-light">52k</h2>
-                <span class="percent-change percent-change--increase"
+                <h2 class="engagement-count text-primary">52k</h2>
+                <span class="percent-change figure--increase"
                   ><img src="images/icon-up.svg" alt="up arrow" />1375%</span
                 >
               </div>
@@ -185,7 +186,7 @@
           <li class="bg-light-card">
             <div>
               <div class="page-views">
-                <p class="text-secondary-light engagement-type">Retweets</p>
+                <p class="text-secondary engagement-type">Retweets</p>
                 <img
                   src="images/icon-twitter.svg"
                   alt="twitter logo"
@@ -193,8 +194,8 @@
                 />
               </div>
               <div>
-                <h2 class="engagement-count text-primary-light">117</h2>
-                <span class="percent-change percent-change--increase"
+                <h2 class="engagement-count text-primary">117</h2>
+                <span class="percent-change figure--increase"
                   ><img src="images/icon-up.svg" alt="up arrow" />303%</span
                 >
               </div>
@@ -203,7 +204,7 @@
           <li class="bg-light-card">
             <div>
               <div class="page-views">
-                <p class="text-secondary-light engagement-type">Likes</p>
+                <p class="text-secondary engagement-type">Likes</p>
                 <img
                   src="images/icon-twitter.svg"
                   alt="twitter logo"
@@ -211,8 +212,8 @@
                 />
               </div>
               <div>
-                <h2 class="engagement-count text-primary-light">507</h2>
-                <span class="percent-change percent-change--increase"
+                <h2 class="engagement-count text-primary">507</h2>
+                <span class="percent-change figure--increase"
                   ><img src="images/icon-up.svg" alt="up arrow" />553%</span
                 >
               </div>
@@ -221,7 +222,7 @@
           <li class="bg-light-card">
             <div>
               <div class="page-views">
-                <p class="text-secondary-light engagement-type">Likes</p>
+                <p class="text-secondary engagement-type">Likes</p>
                 <img
                   src="images/icon-youtube.svg"
                   alt="youtube logo"
@@ -229,8 +230,8 @@
                 />
               </div>
               <div>
-                <h2 class="engagement-count text-primary-light">107</h2>
-                <span class="percent-change percent-change--decrease"
+                <h2 class="engagement-count text-primary">107</h2>
+                <span class="percent-change figure--decrease"
                   ><img src="images/icon-down.svg" alt="down arrow" />19%</span
                 >
               </div>
@@ -239,7 +240,7 @@
           <li class="bg-light-card">
             <div>
               <div class="page-views">
-                <p class="text-secondary-light engagement-type">Total Views</p>
+                <p class="text-secondary engagement-type">Total Views</p>
                 <img
                   src="images/icon-youtube.svg"
                   alt="youtube logo"
@@ -247,8 +248,8 @@
                 />
               </div>
               <div>
-                <h2 class="engagement-count text-primary-light">1407</h2>
-                <span class="percent-change percent-change--decrease"
+                <h2 class="engagement-count text-primary">1407</h2>
+                <span class="percent-change figure--decrease"
                   ><img src="images/icon-down.svg" alt="down arrow" />12%</span
                 >
               </div>

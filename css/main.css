@@ -6,76 +6,94 @@
   margin: 0 auto;
 }
 
-.bg-light-header {
+.light-theme {
+  background: white;
+}
+.light-theme .header {
   background-color: #f5f7ff;
 }
-
-.bg-dark-header {
-  background-color: #1f212e;
+.light-theme .header__theme-btn {
+  background-color: #a6aab9;
 }
-
-.bg-light-card {
+.light-theme .header .switch {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 8.5px);
+  background-color: white;
+  left: initial;
+  right: 2px;
+}
+.light-theme .overview-today-text {
+  color: #63687e;
+}
+.light-theme .text-primary {
+  color: #1e202a;
+}
+.light-theme .text-secondary {
+  color: #63687e;
+}
+.light-theme .followers-list li,
+.light-theme .engagement-list li {
   background-color: #f0f2fa;
 }
-
-.bg-light-card-hover {
+.light-theme .followers-list li .figure--increase,
+.light-theme .engagement-list li .figure--increase {
+  color: #0a7557;
+}
+.light-theme .followers-list li .figure--decrease,
+.light-theme .engagement-list li .figure--decrease {
+  color: #cc000e;
+}
+.light-theme .followers-list li:hover,
+.light-theme .engagement-list li:hover {
   background-color: #e5e5e6;
 }
 
-.bg-dark-card {
-  background-color: #252a41;
-}
-
-.bg-dark-card-hover {
-  background-color: #323958;
-}
-
-.bg-light-switch {
-  background-color: #a6aab9;
-}
-
-.bg-dark-switch {
-  background-image: linear-gradient(to right, #378fe6, #3eda82);
-}
-
-.bg-light-switch-btn {
-  background-color: white;
-}
-
-.bg-dark-switch-btn {
-  background-color: #252a41;
-}
-
-.bg-light-body {
-  background: white;
-}
-
-.bg-dark-body {
+.dark-theme {
   background: #1e202a;
 }
-
-#text-green {
-  color: #0a7557;
+.dark-theme .header {
+  background-color: #1f212e;
 }
-
-#text-red {
-  color: #dc414c;
+.dark-theme .header__theme-btn {
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
 }
-
-.text-primary-light {
-  color: #1e202a;
+.dark-theme .header .switch {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 8.5px);
+  background-color: #252a41;
+  right: initial;
+  left: 2px;
 }
-
-.text-secondary-light {
-  color: #63687e;
-}
-
-.text-primary-dark {
+.dark-theme .overview-today-text {
   color: white;
 }
-
-.text-secondary-dark {
+.dark-theme .text-primary {
+  color: white;
+}
+.dark-theme .text-secondary {
   color: #8b97c6;
+}
+.dark-theme .followers-list li,
+.dark-theme .engagement-list li {
+  background-color: #252a41;
+}
+.dark-theme .followers-list li:hover,
+.dark-theme .engagement-list li:hover {
+  background-color: #323958;
+}
+.dark-theme .followers-list li .figure--increase,
+.dark-theme .engagement-list li .figure--increase {
+  color: #1ebb8f;
+}
+.dark-theme .followers-list li .figure--decrease,
+.dark-theme .engagement-list li .figure--decrease {
+  color: #ff5460;
 }
 
 :root {
@@ -100,26 +118,6 @@ button {
   cursor: pointer;
 }
 
-.switch-light-mode, .switch-dark-mode {
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  position: absolute;
-  top: calc(50% - 8.5px);
-}
-
-.switch-dark-mode {
-  background-color: #252a41;
-  right: initial;
-  left: 2px;
-}
-
-.switch-light-mode {
-  background-color: white;
-  left: initial;
-  right: 2px;
-}
-
 body {
   font-family: "Inter", sans-serif;
 }
@@ -130,7 +128,15 @@ body {
   font-size: 1.4rem;
 }
 
-.followers-list li, .engagement-list li {
+.followers-list,
+.engagement-list {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
+
+.followers-list li,
+.engagement-list li {
   cursor: pointer;
 }
 
@@ -140,6 +146,9 @@ body {
   font-weight: bold;
 }
 
+/*=============================
+      Header Styles
+===============================*/
 .header {
   font-weight: bold;
   padding: 2.5rem 0 6rem 0;
@@ -176,11 +185,9 @@ body {
   top: -50px;
 }
 
-.followers-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
-  grid-gap: 2em;
-}
+/*=============================
+    Styles For Followers List
+===============================*/
 .followers-list li {
   display: block;
   padding: 1.8em 0;
@@ -208,9 +215,6 @@ body {
   text-transform: uppercase;
   margin-bottom: 2em;
   font-size: clamp(1rem, 1.5vw, 1.25rem);
-}
-.followers-list li .followers-today {
-  color: #0a7557;
 }
 .followers-list li .followers-today img {
   margin: 0 0.3em 0.1em 0;
@@ -245,17 +249,9 @@ body {
   margin-bottom: 2.5rem;
 }
 
-.engagement-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
-  grid-gap: 2em;
-}
-.engagement-list .percent-change--increase {
-  color: #0a7557;
-}
-.engagement-list .percent-change--decrease {
-  color: #dc414c;
-}
+/*=============================
+  Styles For Engagement List
+===============================*/
 .engagement-list li {
   border-radius: 0.45em;
   font-weight: bold;
@@ -295,16 +291,14 @@ body {
     align-items: center;
   }
 
-  .followers-list {
-    grid-gap: 2.9em;
-  }
-
-  .engagement-list {
-    grid-gap: 2.9em;
-  }
-
   .container-relative {
     top: -120px;
+  }
+
+  .followers-list,
+.engagement-list {
+    grid-gap: 2.9em;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
   }
 }
 

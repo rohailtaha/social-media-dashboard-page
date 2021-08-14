@@ -1,155 +1,53 @@
 class ThemeSwitcher {
   constructor() {
-    this.theme = 'LIGHT'
-    this.switch = document.getElementById('theme-btn')
-    this.switch.addEventListener('click', this.toggleTheme.bind(this))
-    this.addCardHoverEffect()
+    this.theme = localStorage.getItem('theme') || 'LIGHT';
+    document
+      .getElementById('theme-btn')
+      .addEventListener('click', this.toggleTheme.bind(this));
+    this.applyTheme();
   }
 
-  addCardHoverEffect() {
-    
-    getCards().forEach(card => {
-      card.addEventListener('mouseover', onMouseOver.bind(this, card))
-      card.addEventListener('mouseout', onMouseOut.bind(this, card))
-    })
-
-    function getCards() {
-      return Array.from(
-        document.querySelectorAll('.followers-list li, .engagement-list li')
-      )
-    }
-
-    function onMouseOver(card) {
-      this.theme === 'LIGHT'
-        ? this.toggleClass(card, 'bg-light-card', 'bg-light-card-hover')
-        : this.toggleClass(card, 'bg-dark-card', 'bg-dark-card-hover')
-    }
-
-    function onMouseOut(card) {
-      this.theme === 'LIGHT'
-        ? this.toggleClass(card, 'bg-light-card-hover', 'bg-light-card')
-        : this.toggleClass(card, 'bg-dark-card-hover', 'bg-dark-card')
-    }
+  storeThemeLocally() {
+    localStorage.setItem('theme', this.theme);
   }
 
-  toggleTheme(event) {
-    if(event) event.preventDefault()
-    this.toggleSwitchBackground()
-    this.toggleSwitchBtnBackground()
-    if (this.theme === 'LIGHT') {
-      this.changeToDarkFont()
-      this.changeToDarkBackground()
-    } else {
-      this.changeToLightFont()
-      this.changeToLightBackground()
-    }
+  toggleTheme() {
+    this.theme = this.theme === 'LIGHT' ? 'DARK' : 'LIGHT';
+    localStorage.setItem('theme', this.theme);
+    this.applyTheme();
+  }
 
-    this.theme = this.theme === 'LIGHT' ? 'DARK' : 'LIGHT'
-    this.addCardHoverEffect()
+  applyTheme(event) {
+    if (event) event.preventDefault();
+    this.theme === 'LIGHT' ? this.applyLightTheme() : this.applyDarkTheme();
+  }
+
+  applyLightTheme() {
+    this.toggleClass(
+      document.getElementById('theme-provider'),
+      'dark-theme',
+      'light-theme'
+    );
+  }
+
+  applyDarkTheme() {
+    this.toggleClass(
+      document.getElementById('theme-provider'),
+      'light-theme',
+      'dark-theme'
+    );
   }
 
   toggleClass(element, oldClassName, newClassName) {
-    removeOldClass()
-    addNewClass()
+    removeOldClass();
+    addNewClass();
 
     function removeOldClass() {
-      element.classList.remove(oldClassName)
+      element.classList.remove(oldClassName);
     }
     function addNewClass() {
-      element.classList.add(newClassName)
+      element.classList.add(newClassName);
     }
   }
-
-  toggleSwitchBackground() {
-    this.theme === 'LIGHT'
-      ? this.toggleClass(this.switch, 'bg-light-switch', 'bg-dark-switch')
-      : this.toggleClass(this.switch, 'bg-dark-switch', 'bg-light-switch')
-  }
-
-  toggleSwitchBtnBackground() {
-    this.theme === 'LIGHT'
-      ? this.toggleClass(
-          this.switch.firstElementChild,
-          'switch-light-mode',
-          'switch-dark-mode'
-        )
-      : this.toggleClass(
-          this.switch.firstElementChild,
-          'switch-dark-mode',
-          'switch-light-mode'
-        )
-  }
-
-  getPrimaryTexts() {
-    return this.theme === 'LIGHT'
-      ? Array.from(document.querySelectorAll('.text-primary-light'))
-      : Array.from(document.querySelectorAll('.text-primary-dark'))
-  }
-
-  getSecondaryTexts() {
-    return this.theme === 'LIGHT'
-      ? Array.from(document.querySelectorAll('.text-secondary-light'))
-      : Array.from(document.querySelectorAll('.text-secondary-dark'))
-  }
-
-  changeToDarkFont() {
-    this.getPrimaryTexts().forEach(text => {
-      this.toggleClass(text, 'text-primary-light', 'text-primary-dark')
-    })
-
-    this.getSecondaryTexts().forEach(text => {
-      if (text.classList.contains('overview-today-text')) {
-        this.toggleClass(text, 'text-secondary-light', 'text-primary-dark')
-        return
-      }
-      this.toggleClass(text, 'text-secondary-light', 'text-secondary-dark')
-    })
-  }
-
-  changeToDarkBackground() {
-    this.toggleClass(
-      document.querySelector('body'),
-      'bg-light-body',
-      'bg-dark-body'
-    )
-    this.toggleClass(
-      document.querySelector('header'),
-      'bg-light-header',
-      'bg-dark-header'
-    )
-    Array.from(document.querySelectorAll('.bg-light-card')).forEach(element => {
-      this.toggleClass(element, 'bg-light-card', 'bg-dark-card')
-    })
-  }
-
-  changeToLightFont() {
-    this.getPrimaryTexts().forEach(text => {
-      if (text.classList.contains('overview-today-text')) {
-        this.toggleClass(text, 'text-primary-dark', 'text-secondary-light')
-        return
-      }
-      this.toggleClass(text, 'text-primary-dark', 'text-primary-light')
-    })
-    this.getSecondaryTexts().forEach(text => {
-      this.toggleClass(text, 'text-secondary-dark', 'text-secondary-light')
-    })
-  }
-
-  changeToLightBackground() {
-    this.toggleClass(
-      document.querySelector('body'),
-      'bg-dark-body',
-      'bg-light-body'
-    )
-    this.toggleClass(
-      document.querySelector('header'),
-      'bg-dark-header',
-      'bg-light-header'
-    )
-    Array.from(document.querySelectorAll('.bg-dark-card')).forEach(element => {
-      this.toggleClass(element, 'bg-dark-card', 'bg-light-card')
-    })
-  }
 }
-
-new ThemeSwitcher()
+new ThemeSwitcher();
