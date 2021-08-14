@@ -3,7 +3,6 @@ class ThemeSwitcher {
     this.theme = 'LIGHT'
     this.switch = document.getElementById('switch')
     this.switch.addEventListener('click', this.toggleTheme.bind(this))
-    this.toggleTheme();
     this.addCardHoverEffect()
   }
 
@@ -153,4 +152,4 @@ class ThemeSwitcher {
   }
 }
 
-const themeSwitcher = new ThemeSwitcher()
+new ThemeSwitcher()

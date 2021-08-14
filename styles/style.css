@@ -1327,6 +1327,12 @@ header .theme-switch {
   grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
   grid-gap: 2em;
 }
+.engagement-list .percent-change--increase {
+  color: #1db489;
+}
+.engagement-list .percent-change--decrease {
+  color: #dc414c;
+}
 .engagement-list a {
   border-radius: 0.45em;
   display: block;
@@ -1345,7 +1351,6 @@ header .theme-switch {
   font-size: 3.2rem;
 }
 .engagement-list a .percent-change {
-  color: #1db489;
   font-weight: bold;
 }
 .engagement-list a .percent-change img {
