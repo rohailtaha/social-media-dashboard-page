@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -16,22 +15,22 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>Social Media Dashboard</title>
   </head>
   <body class="bg-light-body">
-    <header class="bg-light-header pt-2h pb-6 mb-2">
+    <header class="header bg-light-header">
       <div class="container">
         <div>
-          <div class="header-main-content mb-1h pb-2">
+          <div class="header__main-content">
             <h1 class="text-primary-light">Social Media Dashboard</h1>
             <p class="text-secondary-light">Total Followers: 23,004</p>
           </div>
-          <div class="toggle-theme-cta text-secondary-light">
+          <div class="header__theme-toggle text-secondary-light">
             <p>Dark Mode</p>
-            <a href="#" class="theme-switch bg-light-switch ml-1h" id="switch">
+            <button class="header__theme-btn bg-light-switch" id="theme-btn">
               <div class="switch-light-mode"></div>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -40,218 +39,220 @@
     <div class="container container-relative">
       <section>
         <ul class="followers-list">
-          <li>
-            <a href="#" class="followers-facebook bg-light-card">
-              <div class="logo-username">
-                <img src="images/icon-facebook.svg" alt="" class="logo" />
-                <p class="username text-secondary-light">@nathanf</p>
-              </div>
-              <h2 class="followers-count text-primary-light">1987</h2>
-              <p class="followers-text text-secondary-light">Followers</p>
-              <div class="followers-today">
-                <img src="images/icon-up.svg" alt="" />
-                <span>12 Today</span>
-              </div>
-            </a>
+          <li class="followers-facebook bg-light-card">
+            <div class="logo-username">
+              <img
+                src="images/icon-facebook.svg"
+                alt="facebook-logo"
+                class="logo"
+              />
+              <p class="username text-secondary-light">@nathanf</p>
+            </div>
+            <h2 class="followers-count text-primary-light">1987</h2>
+            <p class="followers-text text-secondary-light">Followers</p>
+            <div class="followers-today">
+              <img src="images/icon-up.svg" alt="up arrow" />
+              <span>12 Today</span>
+            </div>
           </li>
 
-          <li>
-            <a href="#" class="followers-twitter bg-light-card">
-              <div class="logo-username">
-                <img src="images/icon-twitter.svg" alt="" class="logo" />
-                <p class="username text-secondary-light">@nathanf</p>
-              </div>
-              <h2 class="followers-count text-primary-light">1044</h2>
-              <p class="followers-text text-secondary-light">Followers</p>
-              <div class="followers-today">
-                <img src="images/icon-up.svg" alt="" /><span>99 Today</span>
-              </div>
-            </a>
+          <li class="followers-twitter bg-light-card">
+            <div class="logo-username">
+              <img src="images/icon-twitter.svg" alt="twitter" class="logo" />
+              <p class="username text-secondary-light">@nathanf</p>
+            </div>
+            <h2 class="followers-count text-primary-light">1044</h2>
+            <p class="followers-text text-secondary-light">Followers</p>
+            <div class="followers-today">
+              <img src="images/icon-up.svg" alt="up arrow" /><span
+                >99 Today</span
+              >
+            </div>
           </li>
-          <li>
-            <a href="#" class="followers-instagram bg-light-card">
-              <div class="gradient-instagram"></div>
-              <div class="logo-username">
-                <img src="images/icon-instagram.svg" alt="" class="logo" />
-                <p class="username text-secondary-light">
-                  @realnathanf
-                </p>
-              </div>
-              <h2 class="followers-count text-primary-light">11k</h2>
-              <p class="followers-text text-secondary-light">Followers</p>
-              <div class="followers-today">
-                <img src="images/icon-up.svg" alt="" />
-                <span> 1099 Today</span>
-              </div>
-            </a>
+          <li class="followers-instagram bg-light-card">
+            <div class="gradient-instagram"></div>
+            <div class="logo-username">
+              <img
+                src="images/icon-instagram.svg"
+                alt="instagram logo"
+                class="logo"
+              />
+              <p class="username text-secondary-light">@realnathanf</p>
+            </div>
+            <h2 class="followers-count text-primary-light">11k</h2>
+            <p class="followers-text text-secondary-light">Followers</p>
+            <div class="followers-today">
+              <img src="images/icon-up.svg" alt="up arrow" />
+              <span> 1099 Today</span>
+            </div>
           </li>
-          <li>
-            <a href="#" class="followers-youtube bg-light-card">
-              <div class="logo-username">
-                <img src="images/icon-youtube.svg" alt="" class="logo" />
-                <p class="username text-secondary-light">Nathan F.</p>
-              </div>
-              <h2 class="followers-count text-primary-light">8239</h2>
-              <p class="followers-text text-secondary-light">Subscribers</p>
-              <div class="followers-today">
-                <img src="images/icon-down.svg" alt="" />
-                <span id="text-red"> 144 Today</span>
-              </div>
-            </a>
+          <li class="followers-youtube bg-light-card">
+            <div class="logo-username">
+              <img src="images/icon-youtube.svg" alt="" class="logo" />
+              <p class="username text-secondary-light">Nathan F.</p>
+            </div>
+            <h2 class="followers-count text-primary-light">8239</h2>
+            <p class="followers-text text-secondary-light">Subscribers</p>
+            <div class="followers-today">
+              <img src="images/icon-down.svg" alt="down arrow" />
+              <span id="text-red"> 144 Today</span>
+            </div>
           </li>
         </ul>
       </section>
 
       <section>
-        <h2 class="overview-today-text text-secondary-light mt-4 mb-2h">
+        <h2 class="overview-today-text text-secondary-light">
           Overview - Today
         </h2>
         <ul class="engagement-list">
-          <li>
-            <a href="#" class="bg-light-card">
+          <li class="bg-light-card">
+            <div>
               <div>
-                <div>
-                  <p class="engagement-type text-secondary-light">
-                    Page Views
-                  </p>
-                  <img src="images/icon-facebook.svg" alt="" class="logo" />
-                </div>
-                <div>
-                  <h2 class="engagement-count text-primary-light">87</h2>
-                  <span class="percent-change percent-change--increase">
-                    <img src="images/icon-up.svg" alt="" />
-                    3%</span
-                  >
-                </div>
+                <p class="engagement-type text-secondary-light">Page Views</p>
+                <img
+                  src="images/icon-facebook.svg"
+                  alt="facebook logo"
+                  class="logo"
+                />
               </div>
-            </a>
+              <div>
+                <h2 class="engagement-count text-primary-light">87</h2>
+                <span class="percent-change percent-change--increase">
+                  <img src="images/icon-up.svg" alt="up arrow" />
+                  3%</span
+                >
+              </div>
+            </div>
           </li>
 
-          <li>
-            <a href="#" class="bg-light-card">
-              <div>
-                <div class="page-views">
-                  <p class="text-secondary-light engagement-type">
-                    Likes
-                  </p>
-                  <img src="images/icon-facebook.svg" alt="" class="logo" />
-                </div>
-                <div>
-                  <h2 class="engagement-count text-primary-light">52</h2>
-                  <span class="percent-change percent-change--decrease"
-                    ><img src="images/icon-down.svg" alt="" />2%</span
-                  >
-                </div>
+          <li class="bg-light-card">
+            <div>
+              <div class="page-views">
+                <p class="text-secondary-light engagement-type">Likes</p>
+                <img
+                  src="images/icon-facebook.svg"
+                  alt="facebook logo"
+                  class="logo"
+                />
               </div>
-            </a>
+              <div>
+                <h2 class="engagement-count text-primary-light">52</h2>
+                <span class="percent-change percent-change--decrease"
+                  ><img src="images/icon-down.svg" alt="down arrow" />2%</span
+                >
+              </div>
+            </div>
           </li>
-          <li>
-            <a href="#" class="bg-light-card">
-              <div>
-                <div class="page-views">
-                  <p class="text-secondary-light engagement-type">
-                    Likes
-                  </p>
-                  <img src="images/icon-instagram.svg" alt="" class="logo" />
-                </div>
-                <div>
-                  <h2 class="engagement-count text-primary-light">5462</h2>
-                  <span class="percent-change percent-change--increase"
-                    ><img src="images/icon-up.svg" alt="" />2257%</span
-                  >
-                </div>
+          <li class="bg-light-card">
+            <div>
+              <div class="page-views">
+                <p class="text-secondary-light engagement-type">Likes</p>
+                <img
+                  src="images/icon-instagram.svg"
+                  alt="instagram logo"
+                  class="logo"
+                />
               </div>
-            </a>
+              <div>
+                <h2 class="engagement-count text-primary-light">5462</h2>
+                <span class="percent-change percent-change--increase"
+                  ><img src="images/icon-up.svg" alt="up arrow" />2257%</span
+                >
+              </div>
+            </div>
           </li>
-          <li>
-            <a href="#" class="bg-light-card">
-              <div>
-                <div class="page-views">
-                  <p class="text-secondary-light engagement-type">
-                    Profile Views
-                  </p>
-                  <img src="images/icon-instagram.svg" alt="" class="logo" />
-                </div>
-                <div>
-                  <h2 class="engagement-count text-primary-light">52k</h2>
-                  <span class="percent-change percent-change--increase"
-                    ><img src="images/icon-up.svg" alt="" />1375%</span
-                  >
-                </div>
+          <li class="bg-light-card">
+            <div>
+              <div class="page-views">
+                <p class="text-secondary-light engagement-type">
+                  Profile Views
+                </p>
+                <img
+                  src="images/icon-instagram.svg"
+                  alt="instagram logo"
+                  class="logo"
+                />
               </div>
-            </a>
+              <div>
+                <h2 class="engagement-count text-primary-light">52k</h2>
+                <span class="percent-change percent-change--increase"
+                  ><img src="images/icon-up.svg" alt="up arrow" />1375%</span
+                >
+              </div>
+            </div>
           </li>
-          <li>
-            <a href="#" class="bg-light-card">
-              <div>
-                <div class="page-views">
-                  <p class="text-secondary-light engagement-type">
-                    Retweets
-                  </p>
-                  <img src="images/icon-twitter.svg" alt="" class="logo" />
-                </div>
-                <div>
-                  <h2 class="engagement-count text-primary-light">117</h2>
-                  <span class="percent-change percent-change--increase"
-                    ><img src="images/icon-up.svg" alt="" />303%</span
-                  >
-                </div>
+          <li class="bg-light-card">
+            <div>
+              <div class="page-views">
+                <p class="text-secondary-light engagement-type">Retweets</p>
+                <img
+                  src="images/icon-twitter.svg"
+                  alt="twitter logo"
+                  class="logo"
+                />
               </div>
-            </a>
+              <div>
+                <h2 class="engagement-count text-primary-light">117</h2>
+                <span class="percent-change percent-change--increase"
+                  ><img src="images/icon-up.svg" alt="up arrow" />303%</span
+                >
+              </div>
+            </div>
           </li>
-          <li>
-            <a href="#" class="bg-light-card">
-              <div>
-                <div class="page-views">
-                  <p class="text-secondary-light engagement-type">
-                    Likes
-                  </p>
-                  <img src="images/icon-twitter.svg" alt="" class="logo" />
-                </div>
-                <div>
-                  <h2 class="engagement-count text-primary-light">507</h2>
-                  <span class="percent-change percent-change--increase"
-                    ><img src="images/icon-up.svg" alt="" />553%</span
-                  >
-                </div>
+          <li class="bg-light-card">
+            <div>
+              <div class="page-views">
+                <p class="text-secondary-light engagement-type">Likes</p>
+                <img
+                  src="images/icon-twitter.svg"
+                  alt="twitter logo"
+                  class="logo"
+                />
               </div>
-            </a>
+              <div>
+                <h2 class="engagement-count text-primary-light">507</h2>
+                <span class="percent-change percent-change--increase"
+                  ><img src="images/icon-up.svg" alt="up arrow" />553%</span
+                >
+              </div>
+            </div>
           </li>
-          <li>
-            <a href="#" class="bg-light-card">
-              <div>
-                <div class="page-views">
-                  <p class="text-secondary-light engagement-type">
-                    Likes
-                  </p>
-                  <img src="images/icon-youtube.svg" alt="" class="logo" />
-                </div>
-                <div>
-                  <h2 class="engagement-count text-primary-light">107</h2>
-                  <span class="percent-change percent-change--decrease"
-                    ><img src="images/icon-down.svg" alt="" />19%</span
-                  >
-                </div>
+          <li class="bg-light-card">
+            <div>
+              <div class="page-views">
+                <p class="text-secondary-light engagement-type">Likes</p>
+                <img
+                  src="images/icon-youtube.svg"
+                  alt="youtube logo"
+                  class="logo"
+                />
               </div>
-            </a>
+              <div>
+                <h2 class="engagement-count text-primary-light">107</h2>
+                <span class="percent-change percent-change--decrease"
+                  ><img src="images/icon-down.svg" alt="down arrow" />19%</span
+                >
+              </div>
+            </div>
           </li>
-          <li>
-            <a href="#" class="bg-light-card">
-              <div>
-                <div class="page-views">
-                  <p class="text-secondary-light engagement-type">
-                    Total Views
-                  </p>
-                  <img src="images/icon-youtube.svg" alt="" class="logo" />
-                </div>
-                <div>
-                  <h2 class="engagement-count text-primary-light">1407</h2>
-                  <span class="percent-change percent-change--decrease"
-                    ><img src="images/icon-down.svg" alt="" />12%</span
-                  >
-                </div>
+          <li class="bg-light-card">
+            <div>
+              <div class="page-views">
+                <p class="text-secondary-light engagement-type">Total Views</p>
+                <img
+                  src="images/icon-youtube.svg"
+                  alt="youtube logo"
+                  class="logo"
+                />
               </div>
-            </a>
+              <div>
+                <h2 class="engagement-count text-primary-light">1407</h2>
+                <span class="percent-change percent-change--decrease"
+                  ><img src="images/icon-down.svg" alt="down arrow" />12%</span
+                >
+              </div>
+            </div>
           </li>
         </ul>
       </section>

@@ -1,0 +1,311 @@
+.container {
+  width: 90%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+}
+
+.bg-light-header {
+  background-color: #f5f7ff;
+}
+
+.bg-dark-header {
+  background-color: #1f212e;
+}
+
+.bg-light-card {
+  background-color: #f0f2fa;
+}
+
+.bg-light-card-hover {
+  background-color: #e5e5e6;
+}
+
+.bg-dark-card {
+  background-color: #252a41;
+}
+
+.bg-dark-card-hover {
+  background-color: #323958;
+}
+
+.bg-light-switch {
+  background-color: #a6aab9;
+}
+
+.bg-dark-switch {
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+}
+
+.bg-light-switch-btn {
+  background-color: white;
+}
+
+.bg-dark-switch-btn {
+  background-color: #252a41;
+}
+
+.bg-light-body {
+  background: white;
+}
+
+.bg-dark-body {
+  background: #1e202a;
+}
+
+#text-green {
+  color: #0a7557;
+}
+
+#text-red {
+  color: #dc414c;
+}
+
+.text-primary-light {
+  color: #1e202a;
+}
+
+.text-secondary-light {
+  color: #63687e;
+}
+
+.text-primary-dark {
+  color: white;
+}
+
+.text-secondary-dark {
+  color: #8b97c6;
+}
+
+:root {
+  font-size: 10px;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.switch-light-mode, .switch-dark-mode {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 8.5px);
+}
+
+.switch-dark-mode {
+  background-color: #252a41;
+  right: initial;
+  left: 2px;
+}
+
+.switch-light-mode {
+  background-color: white;
+  left: initial;
+  right: 2px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.header__main-content p,
+.header__theme-toggle p,
+.engagement-type {
+  font-size: 1.4rem;
+}
+
+.followers-list li, .engagement-list li {
+  cursor: pointer;
+}
+
+.percent-change,
+.followers-today {
+  font-size: clamp(1.15rem, 2vw, 1.22rem);
+  font-weight: bold;
+}
+
+.header {
+  font-weight: bold;
+  padding: 2.5rem 0 6rem 0;
+  margin-bottom: 2rem;
+}
+.header__main-content {
+  border-bottom: 1px solid #63687e;
+  margin-bottom: 1.5rem;
+  padding-bottom: 2rem;
+}
+.header__main-content p {
+  margin-top: 0.2em;
+}
+.header__main-content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+.header__theme-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__theme-btn {
+  border-radius: 3em;
+  border: none;
+  width: 50px;
+  display: inline-block;
+  height: 23px;
+  position: relative;
+  margin-left: 1.5rem;
+}
+
+.container-relative {
+  position: relative;
+  top: -50px;
+}
+
+.followers-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  grid-gap: 2em;
+}
+.followers-list li {
+  display: block;
+  padding: 1.8em 0;
+  text-align: center;
+  border-radius: 0.45em;
+}
+.followers-list li .logo-username {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5em;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+}
+.followers-list li .logo-username .logo {
+  margin-right: 0.6em;
+}
+.followers-list li .logo-username .username {
+  font-weight: bold;
+}
+.followers-list li .followers-count {
+  font-size: clamp(4.2rem, 6vw, 5.6rem);
+}
+.followers-list li .followers-text {
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+.followers-list li .followers-today {
+  color: #0a7557;
+}
+.followers-list li .followers-today img {
+  margin: 0 0.3em 0.1em 0;
+}
+.followers-list .followers-facebook {
+  border-top: 3px solid #198ff5;
+}
+.followers-list .followers-twitter {
+  border-top: 3px solid #1ca0f2;
+}
+.followers-list .followers-instagram {
+  position: relative;
+  border-radius: 0.45em;
+  border-top: 3px solid #fdc468;
+}
+.followers-list .gradient-instagram {
+  position: absolute;
+  border-radius: 15em;
+  height: 3px;
+  top: -3px;
+  left: 3px;
+  right: 3px;
+  background-image: linear-gradient(to right, #fdc468, #df4996);
+}
+.followers-list .followers-youtube {
+  border-top: 3px solid #c4032a;
+}
+
+.overview-today-text {
+  font-size: 2.3rem;
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+}
+
+.engagement-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  grid-gap: 2em;
+}
+.engagement-list .percent-change--increase {
+  color: #0a7557;
+}
+.engagement-list .percent-change--decrease {
+  color: #dc414c;
+}
+.engagement-list li {
+  border-radius: 0.45em;
+  font-weight: bold;
+  display: block;
+  padding: clamp(2.2em, 3vw, 2.8em) 2.8em;
+}
+.engagement-list li > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.engagement-list li > div > div:nth-child(2) {
+  margin-top: 1.9em;
+  align-items: baseline;
+}
+.engagement-list li .engagement-count {
+  font-size: 3.2rem;
+}
+.engagement-list li .percent-change img {
+  margin: 0 0.3em 0.1em 0;
+}
+
+@media (min-width: 550px) {
+  .header {
+    padding-bottom: 12em !important;
+  }
+  .header__main-content {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .header__theme-toggle {
+    justify-content: initial;
+  }
+  .header .container > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .followers-list {
+    grid-gap: 2.9em;
+  }
+
+  .engagement-list {
+    grid-gap: 2.9em;
+  }
+
+  .container-relative {
+    top: -120px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

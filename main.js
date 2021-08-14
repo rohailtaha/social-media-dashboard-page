@@ -1,7 +1,7 @@
 class ThemeSwitcher {
   constructor() {
     this.theme = 'LIGHT'
-    this.switch = document.getElementById('switch')
+    this.switch = document.getElementById('theme-btn')
     this.switch.addEventListener('click', this.toggleTheme.bind(this))
     this.addCardHoverEffect()
   }
@@ -15,7 +15,7 @@ class ThemeSwitcher {
 
     function getCards() {
       return Array.from(
-        document.querySelectorAll('.followers-list li a, .engagement-list li a')
+        document.querySelectorAll('.followers-list li, .engagement-list li')
       )
     }
 
