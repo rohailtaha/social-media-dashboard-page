@@ -6,14 +6,6 @@
   margin: 0 auto;
 }
 
-.fw-normal {
-  font-weight: 400;
-}
-
-.fw-bold {
-  font-weight: 700;
-}
-
 .text-center {
   text-align: center;
 }
@@ -75,7 +67,7 @@
 }
 
 #text-green {
-  color: #1db489;
+  color: #0a7557;
 }
 
 #text-red {
@@ -1229,8 +1221,12 @@ body {
 .percent-change,
 .followers-today {
   font-size: clamp(1.15rem, 2vw, 1.22rem);
+  font-weight: bold;
 }
 
+header {
+  font-weight: bold;
+}
 header .header-main-content {
   border-bottom: 1px solid #63687e;
 }
@@ -1279,6 +1275,9 @@ header .theme-switch {
 .followers-list a .logo-username .logo {
   margin-right: 0.6em;
 }
+.followers-list a .logo-username .username {
+  font-weight: bold;
+}
 .followers-list a .followers-count {
   font-size: clamp(4.2rem, 6vw, 5.6rem);
 }
@@ -1289,7 +1288,7 @@ header .theme-switch {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 .followers-list a .followers-today {
-  color: #1db489;
+  color: #0a7557;
 }
 .followers-list a .followers-today img {
   margin: 0 0.3em 0.1em 0;
@@ -1328,13 +1327,14 @@ header .theme-switch {
   grid-gap: 2em;
 }
 .engagement-list .percent-change--increase {
-  color: #1db489;
+  color: #0a7557;
 }
 .engagement-list .percent-change--decrease {
   color: #dc414c;
 }
 .engagement-list a {
   border-radius: 0.45em;
+  font-weight: bold;
   display: block;
   padding: clamp(2.2em, 3vw, 2.8em) 2.8em;
 }
@@ -1349,9 +1349,6 @@ header .theme-switch {
 }
 .engagement-list a .engagement-count {
   font-size: 3.2rem;
-}
-.engagement-list a .percent-change {
-  font-weight: bold;
 }
 .engagement-list a .percent-change img {
   margin: 0 0.3em 0.1em 0;
