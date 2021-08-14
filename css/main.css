@@ -178,6 +178,7 @@ body {
   height: 23px;
   position: relative;
   margin-left: 1.5rem;
+  cursor: pointer;
 }
 
 .container-relative {
