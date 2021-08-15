@@ -2,7 +2,7 @@
 
 ## About the App
 
-An responsive social media dashboard page with light and dark theme toggle. The app can be previewed on [this link](https://social-media-dashboard-page.vercel.app/).
+An responsive social media dashboard page with light and dark theme toggle. The app can be previewed on [this link](https://manage-landing-page-green.vercel.app/).
 
 ## Tools Used
 
@@ -12,4 +12,4 @@ An responsive social media dashboard page with light and dark theme toggle. The 
 
 ## Hosting
 
-The app is hosted on **Vercel** and can be previewed on [this link](https://social-media-dashboard-page.vercel.app/). 
+The app is hosted on **Vercel** and can be previewed on [this link](https://manage-landing-page-green.vercel.app/). 
